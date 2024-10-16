@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Especialidades Médicas | STRTGY</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="map.css">
+</head>
+<body>
+    <div class="strtgy-banner">
+        <img src="..\AskStrtgy_Torre-EP_Heatmaps\strtgy_white.png" alt="STRTGY Logo" class="strtgy-logo">
+        <span class="strtgy-tagline">Estrategias basadas en datos</span>
+    </div>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-map-marked-alt"></i> Ask STRTGY | Torre EP | Mapa de especialidades médicas</h1>
+        </header>
+        <main>
+            <div class="controls">
+                <div class="select-wrapper">
+                    <select id="especialidad-select">
+                        <option value="">Seleccione una especialidad</option>
+                    </select>
+                </div>
+                <div class="legend">
+                    <h3>Densidad</h3>
+                    <div class="legend-scale">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: rgba(0, 0, 255, 0.5);"></span>
+                            <span class="legend-label">Baja</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: rgba(0, 255, 0, 0.5);"></span>
+                            <span class="legend-label">Media</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: rgba(255, 0, 0, 0.5);"></span>
+                            <span class="legend-label">Alta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="map-container"></div>
+        </main>
+        <footer>
+            <p>&copy; 2024 STRTGY. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Leaflet Heat plugin -->
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    <!-- Custom JS -->
+    <script src="map.js"></script>
+</body>
+</html>
